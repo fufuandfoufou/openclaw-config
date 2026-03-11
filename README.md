@@ -226,3 +226,21 @@ Some runtime flows and agents still expect `.claude/skills/`, while Git-friendly
 - Keep `.claude/skills/` synchronized as a compatibility copy when needed
 - Avoid editing both locations independently
 
+
+
+
+## 🧹 Skill Cleanup Targets
+
+Current cleanup targets in the main workspace skill tree:
+
+- `skills/node_modules/`
+  - dependency/vendor content, not a real skill root
+- `skills/skills/`
+  - nested skill directory that should eventually be flattened or relocated
+
+### Cleanup policy
+
+- Do **not** delete these aggressively during active use
+- Prefer documenting and migrating first
+- Move toward a cleaner structure where long-term maintained skills live directly under `skills/`
+
