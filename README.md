@@ -244,3 +244,15 @@ Current cleanup targets in the main workspace skill tree:
 - Prefer documenting and migrating first
 - Move toward a cleaner structure where long-term maintained skills live directly under `skills/`
 
+
+
+
+### Archive move completed
+
+On 2026-03-11, two dirty directories were moved out of the main skill tree into `skills/_archive/` for safer cleanup:
+
+- `skills/node_modules` → `skills/_archive/node_modules`
+- `skills/skills` → `skills/_archive/skills-nested`
+
+This was done as a non-destructive cleanup step before any permanent deletion.
+
