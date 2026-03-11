@@ -256,3 +256,17 @@ On 2026-03-11, two dirty directories were moved out of the main skill tree into 
 
 This was done as a non-destructive cleanup step before any permanent deletion.
 
+
+
+
+### Archived nested skill pruning
+
+After review, the following archived nested skills were removed as redundant or outdated:
+- `github`
+- `weather`
+- `find-skills`
+
+The following remain archived for possible future review:
+- `caldav-calendar`
+- `web-image-saver`
+
