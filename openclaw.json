@@ -1,0 +1,430 @@
+{
+  "meta": {
+    "lastTouchedVersion": "2026.3.8",
+    "lastTouchedAt": "2026-03-10T12:15:52.249Z"
+  },
+  "wizard": {
+    "lastRunAt": "2026-03-05T01:39:47.453Z",
+    "lastRunVersion": "2026.3.2",
+    "lastRunCommand": "doctor",
+    "lastRunMode": "local"
+  },
+  "auth": {
+    "profiles": {
+      "minimax-cn:default": {
+        "provider": "minimax-cn",
+        "mode": "api_key"
+      }
+    }
+  },
+  "acp": {
+    "enabled": true,
+    "backend": "acpx",
+    "defaultAgent": "codex",
+    "allowedAgents": [
+      "codex"
+    ]
+  },
+  "models": {
+    "providers": {
+      "minimax": {
+        "baseUrl": "https://api.minimax.chat/v1/text",
+        "apiKey": {
+          "source": "env",
+          "provider": "default",
+          "id": "OPENCLAW_MINIMAX_API_KEY"
+        },
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "MiniMax",
+            "name": "MiniMax",
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 200000,
+            "maxTokens": 8192
+          }
+        ]
+      },
+      "ark": {
+        "baseUrl": "https://ark.cn-beijing.volces.com/api/coding/v3",
+        "apiKey": {
+          "source": "env",
+          "provider": "default",
+          "id": "OPENCLAW_ARK_API_KEY"
+        },
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "minimax-2.5",
+            "name": "minimax-2.5",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 200000,
+            "maxTokens": 8192,
+            "headers": {
+              "X-Client-Request-Id": "ecs-openclaw/0202.10/i-yegw9kx88wwh2yq2tggz"
+            },
+            "compat": {
+              "supportsDeveloperRole": false
+            }
+          }
+        ]
+      },
+      "minimax-cn": {
+        "baseUrl": "https://api.minimaxi.com/anthropic",
+        "apiKey": {
+          "source": "env",
+          "provider": "default",
+          "id": "OPENCLAW_MINIMAX_CN_API_KEY"
+        },
+        "api": "anthropic-messages",
+        "authHeader": true,
+        "models": [
+          {
+            "id": "MiniMax-M2.5",
+            "name": "MiniMax M2.5",
+            "reasoning": true,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0.3,
+              "output": 1.2,
+              "cacheRead": 0.03,
+              "cacheWrite": 0.12
+            },
+            "contextWindow": 200000,
+            "maxTokens": 8192
+          }
+        ]
+      },
+      "openai": {
+        "baseUrl": "https://gmncode.cn/v1",
+        "apiKey": {
+          "source": "env",
+          "provider": "default",
+          "id": "OPENCLAW_OPENAI_API_KEY"
+        },
+        "api": "openai-responses",
+        "models": [
+          {
+            "id": "gpt-5-codex",
+            "name": "gpt-5-codex",
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 200000,
+            "maxTokens": 8192
+          },
+          {
+            "id": "gpt-5.1-codex",
+            "name": "gpt-5.1-codex",
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 200000,
+            "maxTokens": 8192
+          },
+          {
+            "id": "gpt-5.1-codex-max",
+            "name": "gpt-5.1-codex-max",
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 200000,
+            "maxTokens": 8192
+          },
+          {
+            "id": "gpt-5.1-codex-mini",
+            "name": "gpt-5.1-codex-mini",
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 200000,
+            "maxTokens": 8192
+          },
+          {
+            "id": "gpt-5.2",
+            "name": "gpt-5.2",
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 200000,
+            "maxTokens": 8192
+          },
+          {
+            "id": "gpt-5.4",
+            "name": "gpt-5.4",
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 200000,
+            "maxTokens": 8192
+          }
+        ]
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "openai/gpt-5.4"
+      },
+      "models": {
+        "ark/minimax-2.5": {},
+        "openai/gpt-5-codex": {
+          "alias": "GPT-5 Codex"
+        },
+        "openai/gpt-5.1-codex": {
+          "alias": "GPT-5.1 Codex"
+        },
+        "openai/gpt-5.1-codex-max": {
+          "alias": "GPT-5.1 Codex Max"
+        },
+        "openai/gpt-5.1-codex-mini": {
+          "alias": "GPT-5.1 Codex Mini"
+        },
+        "openai/gpt-5.2": {
+          "alias": "GPT-5.2"
+        },
+        "openai/gpt-5.4": {
+          "alias": "GPT-5.4"
+        },
+        "minimax-cn/MiniMax-M2.5": {
+          "alias": "Minimax"
+        }
+      },
+      "workspace": "~/.openclaw/workspace",
+      "memorySearch": {
+        "provider": "ollama",
+        "remote": {
+          "apiKey": {
+            "source": "env",
+            "provider": "default",
+            "id": "OPENCLAW_MEMORYSEARCH_REMOTE_API_KEY"
+          }
+        },
+        "model": "nomic-embed-text"
+      },
+      "subagents": {
+        "model": "openai/gpt-5.4",
+        "maxConcurrent": 4,
+        "maxSpawnDepth": 2,
+        "runTimeoutSeconds": 300
+      }
+    },
+    "list": [
+      {
+        "id": "telegram",
+        "workspace": "~/.openclaw/workspace",
+        "agentDir": "~/.openclaw/agents/telegram/agent",
+        "model": "openai/gpt-5.4",
+        "subagents": {
+          "allowAgents": [
+            "product-designer",
+            "researcher",
+            "image-generator",
+            "coder"
+          ]
+        }
+      },
+      {
+        "id": "feishu",
+        "workspace": "~/.openclaw/workspace-feishu",
+        "agentDir": "~/.openclaw/agents/feishu/agent",
+        "model": "openai/gpt-5.4",
+        "subagents": {
+          "allowAgents": [
+            "product-designer",
+            "researcher",
+            "image-generator",
+            "coder"
+          ]
+        }
+      },
+      {
+        "id": "product-designer",
+        "name": "产品设计师",
+        "workspace": "~/.openclaw/workspace-product-designer",
+        "agentDir": "~/.openclaw/agents/product-designer/agent",
+        "model": "minimax-cn/MiniMax-M2.5",
+        "skills": [
+          "feishu-doc",
+          "feishu-wiki"
+        ]
+      },
+      {
+        "id": "researcher",
+        "name": "搜索调研员",
+        "workspace": "~/.openclaw/workspace-researcher",
+        "agentDir": "~/.openclaw/agents/researcher/agent",
+        "model": "minimax-cn/MiniMax-M2.5"
+      },
+      {
+        "id": "image-generator",
+        "name": "图片生成师",
+        "workspace": "~/.openclaw/workspace-image-generator",
+        "agentDir": "~/.openclaw/agents/image-generator/agent",
+        "model": "minimax-cn/MiniMax-M2.5"
+      },
+      {
+        "id": "coder",
+        "name": "程序员",
+        "workspace": "~/.openclaw/workspace-coder",
+        "agentDir": "~/.openclaw/agents/coder/agent",
+        "model": "openai/gpt-5.4",
+        "skills": [
+          "acp-router",
+          "coding-agent"
+        ],
+        "tools": {
+          "deny": [
+            "write",
+            "edit",
+            "exec"
+          ]
+        }
+      }
+    ]
+  },
+  "bindings": [
+    {
+      "agentId": "telegram",
+      "match": {
+        "channel": "telegram",
+        "accountId": "*"
+      }
+    },
+    {
+      "agentId": "feishu",
+      "match": {
+        "channel": "feishu",
+        "accountId": "*"
+      }
+    }
+  ],
+  "tools": {
+    "profile": "full",
+    "web": {
+      "fetch": {
+        "enabled": true
+      }
+    },
+    "elevated": {
+      "enabled": true,
+      "allowFrom": {
+        "telegram": [
+          "5946179081"
+        ]
+      }
+    },
+    "exec": {
+      "host": "gateway",
+      "security": "full",
+      "ask": "off"
+    }
+  },
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto",
+    "restart": true,
+    "ownerDisplay": "raw"
+  },
+  "session": {
+    "dmScope": "per-channel-peer"
+  },
+  "channels": {
+    "telegram": {
+      "enabled": true,
+      "dmPolicy": "pairing",
+      "botToken": {
+        "source": "env",
+        "provider": "default",
+        "id": "OPENCLAW_TELEGRAM_BOT_TOKEN"
+      },
+      "allowFrom": [
+        "5946179081"
+      ],
+      "groupPolicy": "allowlist",
+      "streaming": "partial"
+    },
+    "feishu": {
+      "appId": "cli_a7b46edcdefdd00e",
+      "appSecret": {
+        "source": "env",
+        "provider": "default",
+        "id": "OPENCLAW_FEISHU_APP_SECRET"
+      },
+      "enabled": true,
+      "tools": {
+        "doc": true,
+        "wiki": true
+      }
+    }
+  },
+  "gateway": {
+    "mode": "local",
+    "auth": {
+      "mode": "token",
+      "token": "${OPENCLAW_GATEWAY_TOKEN}"
+    },
+    "trustedProxies": [
+      "127.0.0.1",
+      "::1"
+    ]
+  },
+  "plugins": {
+    "entries": {
+      "feishu": {
+        "enabled": true
+      },
+      "acpx": {
+        "enabled": true,
+        "config": {
+          "permissionMode": "approve-all"
+        }
+      }
+    }
+  },
+  "secrets": {
+    "providers": {
+      "default": {
+        "source": "env"
+      }
+    },
+    "defaults": {
+      "env": "default"
+    }
+  }
+}

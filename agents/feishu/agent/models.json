@@ -1,0 +1,239 @@
+{
+  "providers": {
+    "ollama": {
+      "baseUrl": "http://127.0.0.1:11434",
+      "api": "ollama",
+      "models": [
+        {
+          "id": "nomic-embed-text:latest",
+          "name": "nomic-embed-text:latest",
+          "reasoning": false,
+          "input": [
+            "text"
+          ],
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0
+          },
+          "contextWindow": 2048,
+          "maxTokens": 8192
+        }
+      ],
+      "apiKey": "ollama-local"
+    },
+    "minimax": {
+      "baseUrl": "https://api.minimax.chat/v1/text",
+      "apiKey": "OPENCLAW_MINIMAX_API_KEY",
+      "api": "openai-completions",
+      "models": [
+        {
+          "id": "MiniMax",
+          "name": "MiniMax",
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0
+          },
+          "contextWindow": 200000,
+          "maxTokens": 8192,
+          "reasoning": false,
+          "input": [
+            "text"
+          ],
+          "api": "openai-completions"
+        }
+      ]
+    },
+    "ark": {
+      "baseUrl": "https://ark.cn-beijing.volces.com/api/coding/v3",
+      "apiKey": "OPENCLAW_ARK_API_KEY",
+      "api": "openai-completions",
+      "models": [
+        {
+          "id": "minimax-2.5",
+          "name": "minimax-2.5",
+          "reasoning": false,
+          "input": [
+            "text"
+          ],
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0
+          },
+          "contextWindow": 200000,
+          "maxTokens": 8192,
+          "headers": {
+            "X-Client-Request-Id": "ecs-openclaw/0202.10/i-yegw9kx88wwh2yq2tggz"
+          },
+          "compat": {
+            "supportsDeveloperRole": false
+          },
+          "api": "openai-completions"
+        }
+      ]
+    },
+    "minimax-cn": {
+      "baseUrl": "https://api.minimaxi.com/anthropic",
+      "apiKey": "OPENCLAW_MINIMAX_CN_API_KEY",
+      "api": "anthropic-messages",
+      "authHeader": true,
+      "models": [
+        {
+          "id": "MiniMax-M2.5",
+          "name": "MiniMax M2.5",
+          "reasoning": true,
+          "input": [
+            "text"
+          ],
+          "cost": {
+            "input": 0.3,
+            "output": 1.2,
+            "cacheRead": 0.03,
+            "cacheWrite": 0.12
+          },
+          "contextWindow": 200000,
+          "maxTokens": 8192,
+          "api": "anthropic-messages"
+        }
+      ]
+    },
+    "openai": {
+      "baseUrl": "https://gmncode.cn/v1",
+      "apiKey": "OPENCLAW_OPENAI_API_KEY",
+      "api": "openai-responses",
+      "models": [
+        {
+          "id": "gpt-5-codex",
+          "name": "gpt-5-codex",
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0
+          },
+          "contextWindow": 200000,
+          "maxTokens": 8192,
+          "reasoning": false,
+          "input": [
+            "text"
+          ],
+          "api": "openai-responses"
+        },
+        {
+          "id": "gpt-5.1-codex",
+          "name": "gpt-5.1-codex",
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0
+          },
+          "contextWindow": 200000,
+          "maxTokens": 8192,
+          "reasoning": false,
+          "input": [
+            "text"
+          ],
+          "api": "openai-responses"
+        },
+        {
+          "id": "gpt-5.1-codex-max",
+          "name": "gpt-5.1-codex-max",
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0
+          },
+          "contextWindow": 200000,
+          "maxTokens": 8192,
+          "reasoning": false,
+          "input": [
+            "text"
+          ],
+          "api": "openai-responses"
+        },
+        {
+          "id": "gpt-5.1-codex-mini",
+          "name": "gpt-5.1-codex-mini",
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0
+          },
+          "contextWindow": 200000,
+          "maxTokens": 8192,
+          "reasoning": false,
+          "input": [
+            "text"
+          ],
+          "api": "openai-responses"
+        },
+        {
+          "id": "gpt-5.2",
+          "name": "gpt-5.2",
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0
+          },
+          "contextWindow": 200000,
+          "maxTokens": 8192,
+          "reasoning": false,
+          "input": [
+            "text"
+          ],
+          "api": "openai-responses"
+        },
+        {
+          "id": "gpt-5.4",
+          "name": "gpt-5.4",
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0
+          },
+          "contextWindow": 200000,
+          "maxTokens": 8192,
+          "reasoning": false,
+          "input": [
+            "text"
+          ],
+          "api": "openai-responses"
+        }
+      ]
+    },
+    "openrouter": {
+      "baseUrl": "https://openrouter.ai/api/v1",
+      "api": "openai-completions",
+      "models": [
+        {
+          "id": "auto",
+          "name": "OpenRouter Auto",
+          "reasoning": false,
+          "input": [
+            "text",
+            "image"
+          ],
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0
+          },
+          "contextWindow": 200000,
+          "maxTokens": 8192
+        }
+      ],
+      "apiKey": "OPENROUTER_API_KEY"
+    }
+  }
+}

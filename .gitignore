@@ -1,0 +1,45 @@
+# OpenClaw Configuration - Git Ignore Rules
+
+# Secrets - NEVER commit these!
+secrets.env
+.env
+.env.local
+
+# Runtime data
+*.sqlite
+*.sqlite-journal
+*.sqlite-wal
+
+# Logs
+logs/
+logs/*.log
+logs/archive/
+*.log
+
+# Backups (auto-managed)
+backups/
+*.bak
+*.backup-*
+
+# Session data
+memory/
+sessions/
+*.jsonl
+*.jsonl.deleted.*
+
+# Temporary files
+*.tmp
+*.temp
+.DS_Store
+*.swp
+*.swo
+
+# Node modules (if any)
+node_modules/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+Thumbs.db
