@@ -126,6 +126,47 @@ Edit `agents.list` in `openclaw.json`:
 }
 ```
 
+
+## 📈 Stock Automation
+
+This setup now includes a lightweight market watch workflow for A-shares and Hong Kong stocks.
+
+### Scheduled Jobs
+
+- **08:30 daily** — Morning brief
+  - A-share watchlist from fixed buckets: core / momentum / theme
+  - HK watchlist from fixed buckets: large-cap core / core watch / opportunity / theme-ETF
+  - Position tracking for:
+    - `07226.HK` (2x Long HSTECH ETF)
+    - `03896.HK` (Kingsoft Cloud)
+
+- **16:30 daily** — Post-close review
+  - Market recap for A-shares and HK stocks
+  - Candidate bucket changes
+  - Position review and next-day action rules
+
+### Market Watch Skill
+
+The repo also stores a reusable skill:
+
+- `skills/market-watch-skill/`
+
+It contains:
+- `SKILL.md`
+- `scripts/ashare_watchlist_report.py`
+- `scripts/hk_watchlist_report.py`
+- `references/` for strategy notes, bucket definitions, position rules, and automation guidance
+
+### Current Data Sources
+
+- **A-shares**: TuShare (daily/after-close data)
+- **HK stocks**: AKShare (daily historical data + public info)
+
+### Important Limitation
+
+This workflow is designed for daily watchlists, post-close review, and next-day planning.
+It is **not** a tick-level or high-frequency trading system.
+
 ## 📊 Provider Summary
 
 | Provider | Base URL | Models |
