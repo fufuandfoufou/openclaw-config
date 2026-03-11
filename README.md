@@ -206,3 +206,23 @@ On 2026-03-11, the GitHub path was verified end-to-end from the OpenClaw runtime
 - push to `main`
 
 This means future small config updates can be pushed directly from the running OpenClaw environment.
+
+
+
+## 🧩 Skill Directory Policy
+
+To keep OpenClaw skills maintainable without breaking runtime compatibility, this config follows a two-layer convention:
+
+- **`skills/`** → source of truth / primary maintenance location
+- **`.claude/skills/`** → runtime compatibility layer
+
+### Why this split exists
+
+Some runtime flows and agents still expect `.claude/skills/`, while Git-friendly maintenance and publishing are easier when the skill source lives under `skills/`.
+
+### Practical rule
+
+- When creating or improving a long-term skill, maintain it under `skills/`
+- Keep `.claude/skills/` synchronized as a compatibility copy when needed
+- Avoid editing both locations independently
+
