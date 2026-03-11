@@ -155,7 +155,13 @@ git push origin main
 git pull origin main
 ```
 
+### Verified from OpenClaw Runtime
 
-## Test Update
+On 2026-03-11, the GitHub path was verified end-to-end from the OpenClaw runtime:
+- clone repository
+- edit file
+- commit locally
+- authenticate git via `gh auth setup-git`
+- push to `main`
 
-- 2026-03-11: Verified GitHub push path from OpenClaw runtime.
+This means future small config updates can be pushed directly from the running OpenClaw environment.
